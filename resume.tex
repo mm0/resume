@@ -1,0 +1,196 @@
+\documentclass[singlesided,
+              %doublesided,
+               fontsize=10pt
+              ]{my-resume}
+% for debugging-              
+%\overfullrule=1mm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set geometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\highlightwidth{5.3cm}
+\setlength\headerheight{2.6cm}            % note that margintop gets added to this value
+\setlength\marginleft{.7cm}
+\setlength\marginright{\marginleft}      
+\setlength\margintop{.6cm}
+\setlength\marginbottom{.5cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{fontspec}
+\setmainfont{sf-ui-display}[
+  Path = sf-ui-display/,
+  ItalicFont = SFUIText-LightItalic.ttf,
+  UprightFont = *-light.otf,
+  BoldFont = *-light.otf
+]
+
+\newfontfamily\headerfont{my-font}[
+  Path = sf-ui-display/,
+  BoldFont = sf-ui-display-heavy.otf,
+  ItalicFont = SFUIText-LightItalic.ttf,
+  UprightFont = sf-ui-display-heavy.otf
+]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\colorlet{highlightbarcolor}{lightgray}
+\colorlet{headerbarcolor}{awesome-concrete}
+
+\colorlet{headerfontcolor}{black}
+\colorlet{accent}{awesome-red}
+\colorlet{heading}{awesome-darknight}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\name{\headerfont Matt 
+Margolin}
+\subtit{Software Engineer
+DevOps}
+\tagline{Software Engineer with 10+ years of experience. I am passionate about reducing complexity, facilitating software engineering teams, solving problems and increasing system reliability through DevOps and Software Engineering best practices.}
+
+\highlightbar{
+\makeheader
+\section{Contact}
+  \begin{flushleft}%
+    \email{matt.margolin@gmail}
+    \phone{+1 (818) 970-1461}
+    \location{Los Angeles, CA}{https://goo.gl/maps/LfHQsbt7DBikxva36}
+    \homepage{reliable.consulting}{https://www.reliable.consulting}
+    \github{@mm0}{https://github.com/mm0}
+    \linkedin{Matt Margolin}{https://www.linkedin.com/in/mattmarg}%
+  \end{flushleft}%
+
+\section{Skills}%
+  \begin{flushleft}%
+    \skillsection{DevOps}
+    \simpleskill{Agile, Scrum, Jira,}
+    \simpleskill{Business Continuity Planning, Disaster Recovery, High Availability}
+    \simpleskill{CI/CD,}
+    \simpleskill{Configuration Management,}
+    \simpleskill{GitOps, Git-Flow, SDLC,}
+    \simpleskill{Communication, }
+    \simpleskill{Leadership, Mentorship, }
+    \simpleskill{Tooling, Automation, }
+    \simpleskill{Monitoring and Analytics }
+
+    \bigskip
+    \skillsection{Programming}
+    \simpleskill{Ansible, Chef, Puppet,}
+    \simpleskill{Python, Bash, Go,}
+    \simpleskill{Java, Groovy,}
+    \simpleskill{Bash,}
+    \simpleskill{Node.js, React, Angular,}
+    \simpleskill{Gradle, Maven,}
+    \simpleskill{Microservices}
+   
+    \bigskip
+    \skillsection{Security}
+    \simpleskill{DNS, WAF, Traffic Mgmt,}
+    \simpleskill{LDAP, AD, Okta, Saml,}
+    \simpleskill{SonarQube, Veracode}
+    
+    \bigskip
+    \skillsection{Software \& Tools}
+    \simpleskill{Artifactory,}
+    \simpleskill{Cloudbees Jenkins,}
+    \simpleskill{Dynatrace, Slunk,}
+    \simpleskill{Elasticsearch,}
+    \simpleskill{Github Enterprise,}
+    \simpleskill{Hashicorp Terraform, Vault, Consul,}
+    \simpleskill{JBoss, Tomcat, Spring Boot,}
+    \simpleskill{Kafka, RabbitMQ,}
+    \simpleskill{Liquibase, MySQL, Postgres,}
+    \simpleskill{Redis, Memcache,}
+    \simpleskill{Slack, Webhooks/APIs,}
+    \simpleskill{Zookeeper}
+
+    \bigskip
+    \skillsection{Systems}
+    \simpleskill{Docker,}
+    \simpleskill{Kubernetes, OpenShift,}
+    \simpleskill{Redhat, Ubuntu, RHEV,}
+    \simpleskill{AWS, GCE, Azure, Alicloud}
+    
+    \smallskip%
+  \end{flushleft}%
+}
+\mainbar{
+    \section[\faGears]{Employment History}%
+      \job{2019 - Present}
+        {SquareTrade - Remote}
+        {Senior DevOps Engineer}
+        \jobdescriptionstart
+          \jobdescriptionentry{Implement solutions for CI/CD, Infrastructure as Code, Configuration Management, GitOps, Software best practices, Tooling, maintenance. Architecture and design of automation codebase.}
+          \jobdescriptionentry{Provide devops support for team of 500 software engineers.}
+          \jobdescriptionentry{Participate in initiative planning, Architecture consortium, Disaster Recovery Planning and BCP efforts.}
+          \jobdescriptionentry{Lead and worke alongside team of 8 DevOps engineers.}
+          \jobdescriptionentry{Re-architect git flow and release processes. Lead architecture and implementation of Cloudbees Jenkins CI groovy codebase and peripheral codebases.}
+          \jobdescriptionentry{Go-to resource for solving/debugging most obscure software/platform/automation/release issues.}
+          \jobdescriptionentry{Work alongside IT, DBA, System Admins, Engineers and Management on planning and implementation of soultions.}
+        \jobdescriptionend
+    \job{2017 - 2019}
+        {Various - Remote}
+        {DevOps Consultant}%
+        \jobdescriptionstart
+          \jobdescriptionentry{Implemented and maintained DevOps and software solutions for clients such as Technologent, Farmers Insurance, LawTechSupport, Heartbeat (getheartbeat.co), and CloudOptimizer.io.}
+          \jobdescriptionentry{Provided configuration management and CI/CD for a variety of Redhat, IBM and Oracle enterprise software.}
+          \jobdescriptionentry{Utilized Terraform, Ansible, Jenkins for automated deployments of software in AWS.}
+          \jobdescriptionentry{Streamlined applications using AWS Lambda, API Gateway, node.js, Docker and Kubernetes.}
+          \jobdescriptionentry{Provided software training and support for teams using tech such as Elasticsearch, RabbitMQ, Percona, AWS}
+        \jobdescriptionend
+     \job{2014 - 2017}
+        {Tradesy - Santa Monica, CA}
+        {Senior Software Engineer, DevOps}
+        \jobdescriptionstart
+          \jobdescriptionentry{Spearheaded DevOps initiatives using AWS, Ansible, Akamai, Kubernetes and expanded team to four people to support a team of 50 engineers.}
+          \jobdescriptionentry{Designed and implemented CI/CD pipelines and managed cloud infrastructure as code for high availability and to provide multiple environments.}
+          \jobdescriptionentry{Led monitoring and on-call initiatives using OpsGenie, Slack, Pingdom, Nagios, Splunk, and Cloudwatch.}
+          \jobdescriptionentry{Planned for growth and scalability by utilizing Auto Scaling, application monitoring, performance testing, and assisted with micro-services architecture using Kubernetes}
+          \jobdescriptionentry{Created Dynamic AWS QA, CI and Staging Environments, allowing for rapid development and integration between 40+ developers with minimal deployment risk.}
+          \jobdescriptionentry{Performed DB Administration, HA setup, and monitoring for various Database Clusters. Secured infrastructure and codebase by employing principle of least privileges for IAM, Github teams, IPSec}
+        \jobdescriptionend
+     \job{2012 - 2014}
+        {Profilic Interactive - Brooklyn, NY}
+        {Backend Developer}
+        \jobdescriptionstart
+          \jobdescriptionentry{Leveraged back-end development and server administration to scale company into a leading interactive digital agency.} 
+          \jobdescriptionentry{Architected software and App API’s using PHP, node.js, and objective-c/iOS.}
+          \jobdescriptionentry{Provided system administration for projects and to support and train a team of 10 engineers.}
+        \jobdescriptionend
+    \job{2010 - 2012}
+        {WonderMode - New York, NY}
+        {Lead Developer}
+        \jobdescriptionstart
+          \jobdescriptionentry{Developed front end user interface and back-end for fashion e-commerce marketplace startup launched in spring 2011. Administered LAMP in AWS and developed admin dashboard for managing orders, global shipments and payments.}
+        \jobdescriptionend
+    \bigskip
+    \section[\faMortarBoard]{Education}
+    \begin{flushleft}
+    \school{2006 - 2010}%
+        {New York University}%
+        {BA IN COMPUTER SCIENCE \& ECONOMICS}%
+    \smallskip 
+    \end{flushleft}
+}
+
+
+\makebody
+\pagestyle{highlightmain}%
+\clearpage
+\pagestyle{empty}%
+\end{document}

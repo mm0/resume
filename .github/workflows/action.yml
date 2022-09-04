@@ -1,0 +1,44 @@
+---
+name: Generate and Publish Resume
+on: [push]
+jobs:
+  Generate-And-Publish:
+    runs-on: ubuntu-latest
+    container: 
+      image: miktex/miktex:latest
+      credentials:
+        username: ${{ secrets.dockerhub_username }}
+        password: ${{ secrets.dockerhub_password }}
+      volumes:
+        - miktex:/miktex/.miktex
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Generate
+        shell: bash
+        run: miktex-lualatex resume.tex
+        working-directory: /__w/resume/resume
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: my-resume
+          release_name: Latest Resume
+          draft: false
+          prerelease: false
+
+      - name: Publish
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: /__w/resume/resume/resume.pdf
+          asset_name: resume.pdf
+          asset_content_type: application/pdf
