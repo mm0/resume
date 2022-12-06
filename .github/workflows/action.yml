@@ -25,6 +25,12 @@ jobs:
         run: miktex-lualatex resume.tex
         working-directory: /__w/resume/resume
 
+      - name: Delete tag and release
+        uses: dev-drprasad/delete-tag-and-release@v0.2.0
+        with:  
+          delete_release: true # default: false
+          tag_name: my-resume # tag name to delete
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
