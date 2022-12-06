@@ -1,4 +1,6 @@
 # LaTeX Resume
+---
+[![Generate and Publish Resume](https://github.com/mm0/resume/actions/workflows/action.yml/badge.svg)](https://github.com/mm0/resume/actions/workflows/action.yml)
 
 ## To build 
 ### First install miktex, etc
