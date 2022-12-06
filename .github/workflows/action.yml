@@ -27,6 +27,8 @@ jobs:
 
       - name: Delete tag and release
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:  
           delete_release: true # default: false
           tag_name: my-resume # tag name to delete
