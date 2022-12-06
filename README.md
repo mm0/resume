@@ -42,8 +42,9 @@ miktex-lualatex --output-directory=./ resume.tex
   ```
 
 
+### [Direct link to Resume](releases/download/my-resume/MattMargolinResume.pdf)
 
-#### References
+### References
 - Minipage (https://latex-tutorial.com/minipage-latex/)
 - Lists (https://latex-tutorial.com/tutorials/lists/)
 - Inspired by: https://github.com/GiantMolecularCloud/my-resume/
